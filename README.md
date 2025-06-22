@@ -44,10 +44,11 @@ This project:
 ```bash
 data-salary-dashboard/
 │
-├── app.py                # Streamlit web app
-├── train_model.py        # Model training script
-├── salary_model.pkl      # Saved ML model
-├── ds_salaries.csv       # Dataset (if not private)
-├── requirements.txt      # Dependencies
-└── README.md             # You’re reading this!
-
+├── app.py                    # Streamlit web app interface
+├── train_model.py            # Script to preprocess and train the ML model
+├── salary_model.pkl          # Serialized ML model (includes preprocessing pipeline)
+├── job_analysis_mini_lab.ipynb  # EDA + model development notebook (Colab)
+├── requirements.txt          # Python dependencies
+├── screenshot.png            # UI screenshot used in README
+├── README.md                 # Project overview (you're reading it!)
+└── .gitignore                # Files/folders to be excluded from Git

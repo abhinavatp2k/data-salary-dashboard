@@ -7,7 +7,7 @@ Built with 💖 using Python, Streamlit, and Machine Learning.
 ---
 
 ## 🚀 Live Demo (Optional)
-> _Deploy this app to [Streamlit Cloud](https://streamlit.io/cloud) and paste your live link here._
+(https://salary-estimator.streamlit.app/)
 
 ---
 

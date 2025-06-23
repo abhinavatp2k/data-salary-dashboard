@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 import joblib
 
-# Load the dataset
+
 df = pd.read_csv("ds_salaries.csv")
 
 # Preprocessing: rename experience levels
@@ -18,7 +18,7 @@ df['experience_level'] = df['experience_level'].map({
     'EX': 'Executive'
 })
 
-# Feature columns and target
+# Featuring columns and target
 X = df[['job_title', 'experience_level', 'employment_type', 'company_location', 'remote_ratio']]
 y = df['salary_in_usd']
 
@@ -29,7 +29,7 @@ preprocessor = ColumnTransformer(
     remainder='passthrough'
 )
 
-# Build pipeline
+# Building pipeline
 model = Pipeline(steps=[
     ('preprocess', preprocessor),
     ('regressor', RandomForestRegressor(random_state=42))
@@ -46,5 +46,5 @@ preds = model.predict(X_test)
 mae = mean_absolute_error(y_test, preds)
 print(f"MAE: {mae:.2f}")
 
-# Save the model
+
 joblib.dump(model, "salary_model.pkl")
